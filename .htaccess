@@ -1,0 +1,19 @@
+Options -Indexes
+ServerSignature Off
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Block direct web access to sensitive directories
+    RewriteRule ^(config|classes|database|cron|includes)/ - [F,L]
+
+    # Block direct execution of PHP inside uploads
+    RewriteRule ^uploads/.*\.php$ - [F,L]
+
+    # Block dotfiles
+    RewriteRule ^\. - [F,L]
+</IfModule>
+
+<FilesMatch "\.(sql|env|md|log|sh)$">
+    Require all denied
+</FilesMatch>

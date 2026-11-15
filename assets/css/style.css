@@ -1,0 +1,58 @@
+/* ApexSMM Panel Core Stylesheet */
+:root {
+    --brand-purple: #7138D8;
+    --brand-purple-hover: #5E28C2;
+    --brand-purple-soft: rgba(113, 56, 216, 0.10);
+    --brand-black: #151515;
+    --brand-green: #16A36A;
+    --brand-white: #FFFFFF;
+    --surface-bg: #F6F7FB;
+    --border-hairline: rgba(15, 23, 42, 0.08);
+}
+
+html, body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: var(--surface-bg);
+    color: #151515;
+    -webkit-font-smoothing: antialiased;
+}
+
+.font-mono, .tabular-nums {
+    font-variant-numeric: tabular-nums;
+}
+
+.font-mono-code {
+    font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+    font-variant-numeric: tabular-nums;
+}
+
+/* Glass effect ONLY on selected KPI / spotlight cards */
+.glass-kpi {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.72));
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.85);
+    box-shadow: 0 8px 24px -8px rgba(17, 24, 39, 0.08);
+}
+
+.glass-kpi-purple {
+    background: linear-gradient(135deg, rgba(245, 240, 255, 0.92), rgba(255, 255, 255, 0.86));
+    border: 1px solid rgba(113, 56, 216, 0.14);
+}
+
+.glass-kpi-green {
+    background: linear-gradient(135deg, rgba(236, 253, 245, 0.92), rgba(255, 255, 255, 0.86));
+    border: 1px solid rgba(22, 163, 106, 0.16);
+}
+
+.glass-sidebar-wallet {
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.06), rgba(113, 56, 216, 0.10));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+.hero-banner-gradient {
+    background: radial-gradient(circle at 88% 22%, rgba(168, 85, 247, 0.45) 0%, transparent 45%),
+                linear-gradient(115deg, #151515 0%, #2C1259 48%, #7138D8 100%);
+}
